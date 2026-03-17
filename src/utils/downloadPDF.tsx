@@ -8,7 +8,7 @@ export const downloadPDF = async (id: string): Promise<void> => {
     throw new Error(`Element with id "${id}" not found`);
   }
 
-  const canvas = await html2canvas(element, { scale: 2 });
+  const canvas = await html2canvas(element, { scale: 2 , backgroundColor: "#fafafa",});
 
   const imgData = canvas.toDataURL("image/png");
 
